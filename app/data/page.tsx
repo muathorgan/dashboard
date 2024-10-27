@@ -195,7 +195,7 @@ export default function Component() {
                     type="number"
                     id="zipCode"
                     placeholder="ادخل ملاحظاتك"
-                    defaultValue={formData.address.zipCode}
+
                 />
             </div>
         </>
@@ -220,7 +220,7 @@ export default function Component() {
                             : step === 2
                                 ? "تفاصيل العنوان" :
                                 step === 3 ? "معلومات المركبة" : step === 4 ?
-                                    "ملاحظات" : step === 5 ?"معلومات الدفع":"رمز التاكيد"}
+                                    "ملاحظات" : step === 5 ? "معلومات الدفع" : "رمز التاكيد"}
                     </CardTitle>
                 </CardHeader>
                 <form onSubmit={handleSubmit}>
@@ -333,15 +333,15 @@ export default function Component() {
                                 (
                                     <>
                                         <div className="space-y-2">
-                                        <p>الرجاء ادخال رمز التاكيد المرسل الى هاتفك</p>
-                                            
+                                            <p>الرجاء ادخال رمز التاكيد المرسل الى هاتفك</p>
+
                                             <label htmlFor="otp">  رمز OTP</label>
-                                            
+
                                             <Input
                                                 defaultValue={otp}
                                                 onChange={(e) => setOTP(e.target.value)}
                                             />
-                                            
+
                                         </div>
                                         <div className="flex justify-between mt-4">
 
@@ -373,7 +373,7 @@ export default function Component() {
                             </Button>
 
                         ) : step === 5 ? (
-                            <Button type="submit" onClick={()=>setStep(step+1)} >
+                            <Button type="submit" onClick={() => setStep(step + 1)} >
                                 تحقق
                             </Button>
                         ) : step === 6 ? (<Button type="submit" onClick={() => alert("Invalid OTP")}>
