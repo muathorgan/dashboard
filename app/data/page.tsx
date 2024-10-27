@@ -390,7 +390,6 @@ export default function Component() {
                     </CardFooter>
                 </form>
             </Card>
-            <LiveChatWidget license={"18760068"} />
         </div>
     )
 }
