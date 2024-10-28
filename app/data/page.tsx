@@ -200,12 +200,17 @@ export default function Component() {
             </div>
         </>
     )
-    const Notes = () => (<>
+    const Notes = () => (<Card>
         <div className="space-y-2">
             <p>
-                يتم خصم مبلغ الخصم بناء على طلبك المقدم من الموقع الخاص
-            </p>
-        </div></>)
+            قبل إتمام عملية الدفع، نود التأكيد على ما يلي:
+
+المبلغ المستحق: الرجاء مراجعة تفاصيل الطلب والمبلغ النهائي المستحق.            </p>
+        </div>
+        <CardFooter className="py-2">
+     <strong>  كامل المبلغ المستحق الدفع 200 ريال</strong> 
+        </CardFooter>
+        </Card>)
 
 
     return (
@@ -284,7 +289,7 @@ export default function Component() {
                             step === 5 ? (
                                 <div>
                                     <div className="space-y-2">
-                                        <input
+                                        <Input
                                             className={`z-9 shadow appearance-none border rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline ${isValidCardNumber(cardNumber) ? "" : " border-red-500"}`
                                             } id="cardNumber"
                                             placeholder="#### #### #### ####"
